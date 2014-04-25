@@ -82,6 +82,7 @@
     
     _displayFooterOnEmptySection = YES;
     _displayHeaderOnEmptySection = YES;
+	_enableSearch = YES;
 }
 
 - (void)viewDidLoad
@@ -207,9 +208,9 @@
 - (BOOL)isSearching
 {
     // If search scope is selected, we are already searching, even if dataset is all items
-    if (((self.currentSearchString) && (![self.currentSearchString isEqualToString:@""]))
+    if (((self.currentSearchString && ![self.currentSearchString isEqualToString:@""])
             ||
-            self.currentSearchScope > -1)
+            self.currentSearchScope > -1) && _enableSearch)
     {
         return YES;
     }

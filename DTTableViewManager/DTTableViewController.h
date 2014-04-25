@@ -127,6 +127,11 @@ typedef NS_ENUM(NSUInteger,DTTableViewSectionStyle)
  */
 @property (nonatomic, assign) UITableViewRowAnimation reloadRowAnimation;
 
+/**
+ 
+ */
+@property (nonatomic, assign) BOOL enableSearch;
+
 ///---------------------------------------
 /// @name Mapping
 ///---------------------------------------
